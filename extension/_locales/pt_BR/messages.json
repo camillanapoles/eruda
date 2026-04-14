@@ -1,0 +1,231 @@
+{
+  "extensionName": {
+    "message": "Extensão Eruda DevTools",
+    "description": "Nome da extensão exibido na interface do navegador"
+  },
+  "extensionShortName": {
+    "message": "Eruda",
+    "description": "Nome curto"
+  },
+  "extensionDescription": {
+    "message": "Eruda DevTools com snippets, user scripts e debug inteligente de erros para Cromite / Android Chromium.",
+    "description": "Descrição da extensão"
+  },
+
+  "contextMenuInjectEruda": {
+    "message": "Injetar Eruda DevTools",
+    "description": "Item do menu de contexto para injetar o Eruda"
+  },
+  "contextMenuOpenOptions": {
+    "message": "Abrir Opções da Extensão",
+    "description": "Item do menu de contexto para abrir a página de opções"
+  },
+
+  "popupToggleEruda": {
+    "message": "Eruda DevTools",
+    "description": "Rótulo do toggle no popup"
+  },
+  "popupStatScripts": {
+    "message": "Scripts",
+    "description": "Rótulo na barra de estatísticas"
+  },
+  "popupStatSnippets": {
+    "message": "Snippets",
+    "description": "Rótulo na barra de estatísticas"
+  },
+  "popupStatErrors": {
+    "message": "Erros",
+    "description": "Rótulo na barra de estatísticas"
+  },
+  "popupQuickSnippets": {
+    "message": "Snippets Rápidos",
+    "description": "Cabeçalho de seção no popup"
+  },
+  "popupManage": {
+    "message": "Gerenciar",
+    "description": "Link para a página de opções"
+  },
+  "popupNoSnippets": {
+    "message": "Nenhum snippet ainda — abra as Opções para adicionar.",
+    "description": "Mensagem de estado vazio no popup"
+  },
+  "popupMoreSnippets": {
+    "message": "+{n} mais — abrir Opções",
+    "description": "Exibido quando há mais snippets do que o mostrado"
+  },
+  "popupSnippetRan": {
+    "message": "Snippet executado",
+    "description": "Notificação após execução do snippet"
+  },
+  "popupOpenOptions": {
+    "message": "Opções",
+    "description": "Botão para abrir a página de opções"
+  },
+
+  "optionsTitle": {
+    "message": "Extensão Eruda — Opções",
+    "description": "Título da página de opções"
+  },
+  "tabScripts": {
+    "message": "Scripts",
+    "description": "Rótulo da aba"
+  },
+  "tabSnippets": {
+    "message": "Snippets",
+    "description": "Rótulo da aba"
+  },
+  "tabDebug": {
+    "message": "Debug",
+    "description": "Rótulo da aba"
+  },
+  "tabSettings": {
+    "message": "Configurações",
+    "description": "Rótulo da aba"
+  },
+
+  "btnAddScript": {
+    "message": "+ Adicionar Script",
+    "description": "Botão para adicionar novo script"
+  },
+  "btnImportScript": {
+    "message": "Importar",
+    "description": "Botão para importar scripts"
+  },
+  "btnInstall": {
+    "message": "Instalar",
+    "description": "Botão para instalar a partir de URL"
+  },
+  "btnAddSnippet": {
+    "message": "+ Adicionar Snippet",
+    "description": "Botão para adicionar novo snippet"
+  },
+  "btnImport": {
+    "message": "Importar",
+    "description": "Botão para importar"
+  },
+  "btnExport": {
+    "message": "Exportar",
+    "description": "Botão para exportar"
+  },
+  "btnCancel": {
+    "message": "Cancelar",
+    "description": "Botão cancelar"
+  },
+  "btnSave": {
+    "message": "Salvar",
+    "description": "Botão salvar"
+  },
+  "btnClearResolved": {
+    "message": "Limpar Resolvidos",
+    "description": "Botão para limpar erros resolvidos"
+  },
+  "btnClearAll": {
+    "message": "Limpar Tudo",
+    "description": "Botão para limpar todos os erros"
+  },
+  "btnSaveSettings": {
+    "message": "Salvar Configurações",
+    "description": "Botão para salvar configurações"
+  },
+  "btnBackup": {
+    "message": "Fazer backup de todos os dados",
+    "description": "Botão para exportar todos os dados"
+  },
+  "btnRestore": {
+    "message": "Restaurar a partir de backup",
+    "description": "Botão para importar um backup"
+  },
+
+  "editorNewScript": {
+    "message": "Novo Script",
+    "description": "Título do editor ao adicionar novo script"
+  },
+  "editorNewSnippet": {
+    "message": "Novo Snippet",
+    "description": "Título do editor ao adicionar novo snippet"
+  },
+
+  "fieldName": {
+    "message": "Nome",
+    "description": "Rótulo do campo nome"
+  },
+  "fieldDescription": {
+    "message": "Descrição",
+    "description": "Rótulo do campo descrição"
+  },
+  "fieldMatchPatterns": {
+    "message": "Padrões de URL",
+    "description": "Rótulo do campo de padrões de correspondência"
+  },
+  "fieldRunAt": {
+    "message": "Executar em",
+    "description": "Rótulo do campo de timing"
+  },
+  "fieldAutoRun": {
+    "message": "Auto-executar em",
+    "description": "Rótulo do campo de padrões de auto-execução"
+  },
+  "fieldAutoRunEnabled": {
+    "message": "Habilitar auto-execução",
+    "description": "Rótulo do checkbox de auto-execução"
+  },
+  "fieldEnabled": {
+    "message": "Habilitado",
+    "description": "Rótulo do checkbox habilitado"
+  },
+
+  "emptyScripts": {
+    "message": "Nenhum user script instalado ainda.",
+    "description": "Estado vazio para lista de scripts"
+  },
+  "emptySnippets": {
+    "message": "Nenhum snippet ainda.",
+    "description": "Estado vazio para lista de snippets"
+  },
+  "emptyErrors": {
+    "message": "Nenhum erro capturado.",
+    "description": "Estado vazio para lista de erros"
+  },
+
+  "settingsAutoInject": {
+    "message": "Auto-injeção",
+    "description": "Título do grupo de configurações"
+  },
+  "settingAutoInjectEruda": {
+    "message": "Auto-injetar Eruda nas páginas correspondentes",
+    "description": "Rótulo da configuração"
+  },
+  "settingAutoInjectPatterns": {
+    "message": "Padrões de URL (um por linha)",
+    "description": "Rótulo da configuração"
+  },
+  "settingsDebug": {
+    "message": "Debug",
+    "description": "Título do grupo de configurações"
+  },
+  "settingErrorCapture": {
+    "message": "Habilitar captura de erros",
+    "description": "Rótulo da configuração"
+  },
+  "settingThrottleMs": {
+    "message": "Intervalo mínimo entre relatórios (ms)",
+    "description": "Rótulo da configuração"
+  },
+  "settingsData": {
+    "message": "Dados",
+    "description": "Título do grupo de configurações"
+  },
+
+  "savedOk": {
+    "message": "Salvo com sucesso!",
+    "description": "Mensagem de sucesso"
+  },
+  "errorEmptyCode": {
+    "message": "O código não pode estar vazio.",
+    "description": "Mensagem de validação"
+  },
+  "errorEmptyName": {
+    "message": "O nome é obrigatório.",
+    "description": "Mensagem de validação"
+  }
+}

@@ -29,6 +29,23 @@ export default [
   },
   {files: ['build/**/*.js'], languageOptions:{globals: {...globals.node}}},
   {
-    ignores: ['test','dist','coverage'],
-  }
+    // Chrome extension source files: expose the `chrome` extension API global
+    // and relax rules that are incompatible with embedded code strings.
+    files: ['extension/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.builtin,
+        chrome: 'readonly',
+        eruda: 'readonly',
+      },
+    },
+    rules: {
+      'no-new-func': 'off',
+      quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+    },
+  },
+  {
+    ignores: ['test', 'dist', 'coverage', 'extension-dist', 'extension/test'],
+  },
 ]

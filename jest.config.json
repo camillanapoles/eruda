@@ -1,0 +1,16 @@
+{
+  "testMatch": ["<rootDir>/extension/test/**/*.test.js"],
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.js$": ["babel-jest", {
+      "presets": [["@babel/preset-env", {"targets": {"node": "current"}, "modules": "commonjs"}]],
+      "plugins": ["@babel/plugin-proposal-class-properties"]
+    }]
+  },
+  "moduleNameMapper": {
+    "^../scripts/storage-sync\\.js$": "<rootDir>/extension/scripts/storage-sync.js",
+    "^../scripts/script-manager\\.js$": "<rootDir>/extension/scripts/script-manager.js",
+    "^../scripts/snippet-manager\\.js$": "<rootDir>/extension/scripts/snippet-manager.js",
+    "^../scripts/error-debugger\\.js$": "<rootDir>/extension/scripts/error-debugger.js"
+  }
+}
