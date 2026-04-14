@@ -1,0 +1,231 @@
+{
+  "extensionName": {
+    "message": "Eruda DevTools Extension",
+    "description": "Extension name shown in browser UI"
+  },
+  "extensionShortName": {
+    "message": "Eruda",
+    "description": "Short name"
+  },
+  "extensionDescription": {
+    "message": "Eruda DevTools with snippets, user scripts, and intelligent error debugging for Cromite / Android Chromium.",
+    "description": "Extension description shown in the browser store"
+  },
+
+  "contextMenuInjectEruda": {
+    "message": "Inject Eruda DevTools",
+    "description": "Context menu item to inject Eruda"
+  },
+  "contextMenuOpenOptions": {
+    "message": "Open Extension Options",
+    "description": "Context menu item to open options page"
+  },
+
+  "popupToggleEruda": {
+    "message": "Eruda DevTools",
+    "description": "Toggle label in popup"
+  },
+  "popupStatScripts": {
+    "message": "Scripts",
+    "description": "Stats bar label"
+  },
+  "popupStatSnippets": {
+    "message": "Snippets",
+    "description": "Stats bar label"
+  },
+  "popupStatErrors": {
+    "message": "Errors",
+    "description": "Stats bar label"
+  },
+  "popupQuickSnippets": {
+    "message": "Quick Snippets",
+    "description": "Section header in popup"
+  },
+  "popupManage": {
+    "message": "Manage",
+    "description": "Link to options page"
+  },
+  "popupNoSnippets": {
+    "message": "No snippets yet — open Options to add one.",
+    "description": "Empty state message in popup"
+  },
+  "popupMoreSnippets": {
+    "message": "+{n} more — open Options",
+    "description": "Shown when there are more snippets than displayed"
+  },
+  "popupSnippetRan": {
+    "message": "Snippet executed",
+    "description": "Notification after snippet runs"
+  },
+  "popupOpenOptions": {
+    "message": "Options",
+    "description": "Button to open options page"
+  },
+
+  "optionsTitle": {
+    "message": "Eruda Extension — Options",
+    "description": "Options page title"
+  },
+  "tabScripts": {
+    "message": "Scripts",
+    "description": "Tab label"
+  },
+  "tabSnippets": {
+    "message": "Snippets",
+    "description": "Tab label"
+  },
+  "tabDebug": {
+    "message": "Debug",
+    "description": "Tab label"
+  },
+  "tabSettings": {
+    "message": "Settings",
+    "description": "Tab label"
+  },
+
+  "btnAddScript": {
+    "message": "+ Add Script",
+    "description": "Button to add a new script"
+  },
+  "btnImportScript": {
+    "message": "Import",
+    "description": "Button to import scripts"
+  },
+  "btnInstall": {
+    "message": "Install",
+    "description": "Button to install from URL"
+  },
+  "btnAddSnippet": {
+    "message": "+ Add Snippet",
+    "description": "Button to add a new snippet"
+  },
+  "btnImport": {
+    "message": "Import",
+    "description": "Button to import"
+  },
+  "btnExport": {
+    "message": "Export",
+    "description": "Button to export"
+  },
+  "btnCancel": {
+    "message": "Cancel",
+    "description": "Cancel button"
+  },
+  "btnSave": {
+    "message": "Save",
+    "description": "Save button"
+  },
+  "btnClearResolved": {
+    "message": "Clear Resolved",
+    "description": "Button to clear resolved errors"
+  },
+  "btnClearAll": {
+    "message": "Clear All",
+    "description": "Button to clear all errors"
+  },
+  "btnSaveSettings": {
+    "message": "Save Settings",
+    "description": "Button to save settings"
+  },
+  "btnBackup": {
+    "message": "Backup all data",
+    "description": "Button to export all extension data"
+  },
+  "btnRestore": {
+    "message": "Restore from backup",
+    "description": "Button to import a backup"
+  },
+
+  "editorNewScript": {
+    "message": "New Script",
+    "description": "Editor title when adding a new script"
+  },
+  "editorNewSnippet": {
+    "message": "New Snippet",
+    "description": "Editor title when adding a new snippet"
+  },
+
+  "fieldName": {
+    "message": "Name",
+    "description": "Name field label"
+  },
+  "fieldDescription": {
+    "message": "Description",
+    "description": "Description field label"
+  },
+  "fieldMatchPatterns": {
+    "message": "Match Patterns",
+    "description": "Match patterns field label"
+  },
+  "fieldRunAt": {
+    "message": "Run At",
+    "description": "Run-at timing field label"
+  },
+  "fieldAutoRun": {
+    "message": "Auto-run on",
+    "description": "Auto-run URL patterns field label"
+  },
+  "fieldAutoRunEnabled": {
+    "message": "Enable auto-run",
+    "description": "Checkbox label for enabling auto-run"
+  },
+  "fieldEnabled": {
+    "message": "Enabled",
+    "description": "Enabled checkbox label"
+  },
+
+  "emptyScripts": {
+    "message": "No user scripts installed yet.",
+    "description": "Empty state for scripts list"
+  },
+  "emptySnippets": {
+    "message": "No snippets yet.",
+    "description": "Empty state for snippets list"
+  },
+  "emptyErrors": {
+    "message": "No errors captured.",
+    "description": "Empty state for error list"
+  },
+
+  "settingsAutoInject": {
+    "message": "Auto-inject",
+    "description": "Settings group title"
+  },
+  "settingAutoInjectEruda": {
+    "message": "Auto-inject Eruda on matching pages",
+    "description": "Setting label"
+  },
+  "settingAutoInjectPatterns": {
+    "message": "URL patterns (one per line)",
+    "description": "Setting label"
+  },
+  "settingsDebug": {
+    "message": "Debug",
+    "description": "Settings group title"
+  },
+  "settingErrorCapture": {
+    "message": "Enable error capture",
+    "description": "Setting label"
+  },
+  "settingThrottleMs": {
+    "message": "Throttle (ms between reports)",
+    "description": "Setting label"
+  },
+  "settingsData": {
+    "message": "Data",
+    "description": "Settings group title"
+  },
+
+  "savedOk": {
+    "message": "Saved successfully!",
+    "description": "Success message"
+  },
+  "errorEmptyCode": {
+    "message": "Code cannot be empty.",
+    "description": "Validation error message"
+  },
+  "errorEmptyName": {
+    "message": "Name is required.",
+    "description": "Validation error message"
+  }
+}
