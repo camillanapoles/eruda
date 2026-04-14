@@ -271,6 +271,20 @@ async function uninstall(id) {
 // ---------------------------------------------------------------------------
 
 /**
+ * Escape a string for safe embedding inside a single-quoted JS string literal.
+ * Handles backslashes first so they are not double-escaped.
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeForStringLiteral(str) {
+  return String(str)
+    .replace(/\\/g, '\\\\')   // backslash must come first
+    .replace(/'/g, "\\'")      // single quote
+    .replace(/\r/g, '\\r')
+    .replace(/\n/g, '\\n')
+}
+
+/**
  * Build a self-contained IIFE that wraps the user code with a minimal
  * GM_* API shim. The shim communicates with the background via
  * chrome.runtime.sendMessage for privileged operations.
@@ -281,13 +295,17 @@ async function uninstall(id) {
 function buildExecutable(script) {
   const { grant } = script.metadata
 
+  // Pre-escape all metadata strings that will be embedded into the generated source
+  const safeId   = escapeForStringLiteral(script.id)
+  const safeName = escapeForStringLiteral(script.metadata.name)
+
   // GM_* shim — only include the APIs the script declared via @grant
   const shimParts = []
 
   if (grant.includes('GM_log')) {
     shimParts.push(`
       function GM_log(...args) {
-        console.log('[UserScript:${script.metadata.name}]', ...args);
+        console.log('[UserScript:${safeName}]', ...args);
       }
     `)
   }
@@ -317,18 +335,18 @@ function buildExecutable(script) {
       function GM_getValue(key, defaultValue) {
         // Synchronous shim: reads from localStorage fallback.
         try {
-          const raw = localStorage.getItem('__gm_${script.id}_' + key);
+          const raw = localStorage.getItem('__gm_${safeId}_' + key);
           return raw !== null ? JSON.parse(raw) : defaultValue;
         } catch { return defaultValue; }
       }
       function GM_setValue(key, value) {
         try {
-          localStorage.setItem('__gm_${script.id}_' + key, JSON.stringify(value));
+          localStorage.setItem('__gm_${safeId}_' + key, JSON.stringify(value));
         } catch { /* quota exceeded */ }
         // Also persist to chrome.storage via background.
         chrome.runtime.sendMessage({
           type: 'GM_setValue',
-          scriptId: '${script.id}',
+          scriptId: '${safeId}',
           key,
           value
         });
@@ -340,7 +358,7 @@ function buildExecutable(script) {
     shimParts.push(`
       function GM_xmlhttpRequest(details) {
         chrome.runtime.sendMessage(
-          { type: 'GM_xmlhttpRequest', scriptId: '${script.id}', details },
+          { type: 'GM_xmlhttpRequest', scriptId: '${safeId}', details },
           (response) => {
             if (response && response.error && details.onerror) {
               details.onerror(response);
@@ -358,7 +376,7 @@ function buildExecutable(script) {
       function GM_notification(details) {
         chrome.runtime.sendMessage({
           type: 'GM_notification',
-          scriptId: '${script.id}',
+          scriptId: '${safeId}',
           details: typeof details === 'string' ? { text: details } : details
         });
       }
@@ -377,11 +395,11 @@ function buildExecutable(script) {
       try {
         ${script.code}
       } catch (err) {
-        console.error('[UserScript Error:${script.metadata.name}]', err);
+        console.error('[UserScript Error:${safeName}]', err);
         chrome.runtime.sendMessage({
           type: 'SCRIPT_ERROR',
-          scriptId: '${script.id}',
-          scriptName: '${script.metadata.name.replace(/'/g, "\\'")}',
+          scriptId: '${safeId}',
+          scriptName: '${safeName}',
           error: { message: err.message, stack: err.stack }
         });
       }

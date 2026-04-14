@@ -488,7 +488,7 @@ function bindGlobalEvents() {
       if (script && script.error) throw new Error(script.error)
       await renderScripts()
       document.getElementById('url-install-bar').hidden = true
-      toast(`Installed: ${script.script && script.script.metadata.name}`, 'ok')
+      toast(`Installed: ${script.script?.metadata?.name || 'Unknown'}`, 'ok')
     } catch (err) {
       toast(err.message, 'error')
     }

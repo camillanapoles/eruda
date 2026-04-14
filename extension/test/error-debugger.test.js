@@ -256,9 +256,9 @@ describe('clearAll', () => {
 })
 
 // ---------------------------------------------------------------------------
-// Shared fixtures
+// Shared fixtures (used by tests after appendError describe block)
 // ---------------------------------------------------------------------------
-const BASE = {
+const BASE_ERROR_TEMPLATE = {
   type: 'runtime',
   message: 'Test error',
   stack: '',
@@ -269,5 +269,5 @@ const BASE = {
 }
 
 function BASE_ERROR(overrides) {
-  return Object.assign({}, BASE, overrides)
+  return Object.assign({}, BASE_ERROR_TEMPLATE, overrides)
 }

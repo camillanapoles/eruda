@@ -128,7 +128,7 @@ function renderSnippetList(snippets, tabId) {
     moreHint.className = 'more-hint'
     const remaining = enabled.length - 5
     moreHint.textContent =
-      (chrome.i18n.getMessage('popupMoreSnippets') || `+${remaining} more — open Options`) .replace('{n}', remaining)
+      (chrome.i18n.getMessage('popupMoreSnippets') || `+${remaining} more — open Options`).replace('{n}', remaining)
     list.appendChild(moreHint)
   }
 }
